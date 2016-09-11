@@ -1,13 +1,9 @@
 <!doctype html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
-
 <title>Portable Auroratone</title>
-
 <script src="modernizr-2.0.6.js"></script>
-
 <script type="text/javascript">
 
 window.addEventListener("load", windowLoadHandler, false);
@@ -73,13 +69,13 @@ function canvasApp() {
 	init();
 	
 	function init() {
-		gridWidth = 60;
-		gridHeight = 36;
+		gridWidth = 100;
+		gridHeight = 86;
 		
 		cellWidth = displayWidth/gridWidth;
 		cellHeight = displayHeight/gridHeight;
 		
-		ease = 0.57;
+		ease = 0.27;
 		velMax = 255;
 		minDist = 6;
 		minDistSquare = minDist*minDist;
@@ -89,7 +85,7 @@ function canvasApp() {
 		
 		displayCanvas.addEventListener("click", restart, false);
 		
-		timer = window.setInterval(onTimer, 1000/50);
+		timer = window.setInterval(onTimer, 1000/800);
 	}
 	
 	function createCells() {
@@ -298,16 +294,8 @@ window.onload = window.onresize = function() {
 }
 </script>
 
-
-<title>HTML5 Canvas Generative Art</title>
-
 <style type="text/css">
-	body {margin:0;} 
-	h4 {font-family: sans-serif; color:#555555; font-size:16px;}
-	h3 {font-family: sans-serif; color:#555555;}
-	p {font-family: sans-serif; color:#555555; font-size:14px;}
-		#caption {position:absolute; width:900px; text-align:center; top:545px; z-index:1}
-	a {font-family: sans-serif; color:#d15423; text-decoration:none;}
+	body {margin:0;background-color:black;} 
 </style>
 
 </head>
