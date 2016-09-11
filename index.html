@@ -85,7 +85,7 @@ function canvasApp() {
 		
 		displayCanvas.addEventListener("click", restart, false);
 		
-		timer = window.setInterval(onTimer, 1000/800);
+		timer = window.setInterval(onTimer, 1000/200);
 	}
 	
 	function createCells() {
@@ -162,6 +162,7 @@ function canvasApp() {
 	}
 	
 	function restart(evt) {
+
 		cell = cellList.first;
 		while (cell != null) {
 			cell.bufferR = cell.r = Math.random()*255;
@@ -292,10 +293,20 @@ window.onload = window.onresize = function() {
   displayCanvas.width = window.outerWidth;
   displayCanvas.height = window.outerHeight;
 }
+
 </script>
 
 <style type="text/css">
-	body {margin:0;background-color:black;} 
+	body {
+		margin:0;
+		background-color:black;
+		animation: fadein 8s;
+   }
+	@keyframes fadein {
+	  0% { opacity: 0}
+	  50% { opacity:0.1; }
+	  100%   { opacity: 1}
+	}
 </style>
 
 </head>
